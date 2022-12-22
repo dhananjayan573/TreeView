@@ -1,0 +1,12 @@
+<ul class="tree-view">
+    <li class="system-main" 
+       *ngFor="let item of items">
+      <div class="system-main__apps"  (click)="onexpand(item)">
+          <span class="system-main__icon"><i class="fa fa-folder"></i></span>
+          <span class="system-main__name" > {{ item.DisplayName }} </span>
+      </div>
+      <ul *ngIf="item.Children">
+        <app-tree-view  [items]="item.Children"></app-tree-view>
+      </ul>
+    </li>
+    </ul>
