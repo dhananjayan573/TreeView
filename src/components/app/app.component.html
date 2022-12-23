@@ -1,1 +1,5 @@
-<app-tree-view [items]="data"></app-tree-view>
+<app-tree-view FlatDataBinding
+[data]="data"
+[idField]="'ParentKey'"
+[parentIdField]="'ChildKey'"
+></app-tree-view>

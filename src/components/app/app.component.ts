@@ -8,7 +8,7 @@ import { DataService } from 'src/services/data.service';
   providers:[DataService]
 })
 export class AppComponent implements OnInit  {
-  data:any[] | undefined;
+  data:any[]=[];
   constructor(private _dataService:DataService){
 
   }
